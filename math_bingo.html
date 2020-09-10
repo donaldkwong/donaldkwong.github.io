@@ -66,10 +66,18 @@
 					});
 					if (correct) {
 						cell.removeClass("incorrect");
-						cell.addClass("correct");
+						if (cell.hasClass("correct")) {
+							cell.removeClass("correct");
+						} else {
+							cell.addClass("correct");
+						}
 					} else {
 						cell.removeClass("correct");
-						cell.addClass("incorrect");						
+						if (cell.hasClass("incorrect")) {
+							cell.removeClass("incorrect");
+						} else {
+							cell.addClass("incorrect");
+						}
 					}
 	        	})
 	        })
