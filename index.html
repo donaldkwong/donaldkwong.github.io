@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Math Bingo!</title>
+    <title>Math Bingo!</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style media="all">
 		table {
@@ -53,7 +53,7 @@
 </head>
 <body>
     <script>
-	    $.getJSON('http://time.jsontest.com', function(data) {
+	    $.getJSON("https://donaldkwong.github.io/questions.json", function(data) {
 	        $(".bingo_cell").click(function() {
 	        	var cell_number = $(this).text();
 	        	$(".question_number").html("#" + cell_number);
