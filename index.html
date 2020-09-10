@@ -57,7 +57,7 @@
 	        $(".bingo_cell").click(function() {
 	        	var cell_number = $(this).text();
 	        	$(".question_number").html("#" + cell_number);
-	        	$(".question_text").html("A placeholder for the math bingo question for cell number " + cell_number + ".");
+	        	$(".question_text").html(data[cell_number].q);
 	        	$(".answer").unbind("click");
 	        	$(".answer").click(function() {
 	        		var correct = $(this).hasClass("correct");
