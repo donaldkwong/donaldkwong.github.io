@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math Bingo Questions</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style media="all">
+		table {
+			border-collapse: collapse;
+		}
+    	table, th, td {
+ 			border: 1px solid black;
+		}
+		.question_table {
+			width: 60%;
+			margin: auto;
+			margin-bottom: 50px;
+		}
+		.question_number {
+			width: 20%;
+			margin: auto;
+			margin-bottom: 50px;
+			font-size: 500%;
+			text-align: center;
+		}
+		.question_text, .answer_text {
+			text-align: center;
+			font-size: 200%;
+			padding: 15px;
+		}
+    </style>
+</head>
+<body>
+    <script>
+	    $.getJSON("https://donaldkwong.github.io/math_bingo_questions.json", function(data) {
+	    	for (var number in data) {
+	    		$(".question_table").append("<tr><td rowspan='2' class='question_number'>#"+number+"</td><td class='question_text'>"+data[number].q+"</td></tr><tr><td class='answer_text'>"+data[number].a+"</td></tr>");
+	    	}
+	    });
+    </script>
+
+	<div>
+	    <table class="question_table">
+	    </table>
+	</div>
+</body>
+</html>
