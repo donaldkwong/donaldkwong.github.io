@@ -3,101 +3,130 @@
 <head>
     <title>Math Bingo!</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <style media="all">
-		table {
-			border-collapse: collapse;
-		}
-    	table, th, td {
- 			border: 1px solid black;
-		}
-		.bingo_table {
-			width: 60%;
-			margin: auto;
-		}
-		.bingo_cell {
-			width: 20%;
-			padding-top: 5%;
-			padding-bottom: 5%;
-			height: 0;
-			text-align: center;
-			font-size: 500%;
-		}
-		.correct {
-			background-color: lightgreen;
-		}
-		.incorrect {
-			background-color: pink;
-		}
-		.question_table {
-			width: 60%;
-			margin: auto;
-			margin-bottom: 50px;
-		}
-		.question_number {
-			width: 20%;
-			margin: auto;
-			margin-bottom: 50px;
-			font-size: 500%;
-			text-align: center;
-		}
-		.question_text {
-			text-align: center;
-			font-size: 200%;			
-		}
-		.answer {
-			width: 3%;
-			margin: auto;
-			text-align: center;			
-		}
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+             border: 1px solid black;
+        }
+        .bingo_table {
+            width: 60%;
+            margin: auto;
+        }
+        .bingo_cell {
+            width: 20%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            height: 0;
+            text-align: center;
+            font-size: 500%;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: pink;
+        }
+        .question_table {
+            width: 60%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        .question_number {
+            width: 20%;
+            margin: auto;
+            margin-bottom: 50px;
+            font-size: 500%;
+            text-align: center;
+        }
+        .question_text {
+            text-align: center;
+            font-size: 200%;
+        }
+        .answer {
+            width: 3%;
+            margin: auto;
+            text-align: center;
+        }
+        .button_container {
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <script>
-	    $.getJSON("https://donaldkwong.github.io/math_bingo_questions.json", function(data) {
-	        $(".bingo_cell").click(function() {
-	        	var cell_number = $(this).text();
-	        	$(".question_number").html("#" + cell_number);
-	        	$(".question_text").html(data[cell_number].q);
-	        	$(".answer").unbind("click");
-	        	$(".answer").click(function() {
-	        		var correct = $(this).hasClass("correct");
-	        		var cell = $(".bingo_cell").filter(function() {
-					    return $(this).text() === cell_number;
-					});
-					if (correct) {
-						cell.removeClass("incorrect");
-						if (cell.hasClass("correct")) {
-							cell.removeClass("correct");
-						} else {
-							cell.addClass("correct");
-						}
-					} else {
-						cell.removeClass("correct");
-						if (cell.hasClass("incorrect")) {
-							cell.removeClass("incorrect");
-						} else {
-							cell.addClass("incorrect");
-						}
-					}
-	        	})
-	        })
-	    });
+        $.getJSON("https://donaldkwong.github.io/math_bingo_questions.json", function(data) {
+            var initial_values = Cookies.get('values');
+            if (initial_values) {
+                initial_values = JSON.parse(initial_values);
+                for (var number in initial_values) {
+                    var cell = $(".bingo_cell").filter(function() {
+                        return $(this).text() === number;
+                    });
+                    cell.addClass(initial_values[number] == 1 ? "correct" : "incorrect");
+                }
+            }
+
+            $(".bingo_cell").click(function() {
+                var cell_number = $(this).text();
+                $(".question_number").html("#" + cell_number);
+                $(".question_text").html(data[cell_number].q);
+                $(".answer").unbind("click");
+                $(".answer").click(function() {
+                    var correct = $(this).hasClass("correct");
+                    var cell = $(".bingo_cell").filter(function() {
+                        return $(this).text() === cell_number;
+                    });
+                    var values = Cookies.get('values');
+                    if (!values) {
+                        values = {};
+                    } else {
+                        values = JSON.parse(values);
+                    }
+                    values[cell_number] = undefined;
+                    if (correct) {
+                        cell.removeClass("incorrect");
+                        if (cell.hasClass("correct")) {
+                            cell.removeClass("correct");
+                        } else {
+                            cell.addClass("correct");
+                            values[cell_number] = 1;
+                        }
+                    } else {
+                        cell.removeClass("correct");
+                        if (cell.hasClass("incorrect")) {
+                            cell.removeClass("incorrect");
+                        } else {
+                            cell.addClass("incorrect");
+                            values[cell_number] = -1;
+                        }
+                    }
+                    Cookies.set('values', JSON.stringify(values));
+                })
+            })
+        });
     </script>
 
-	<div>
-	    <table class="question_table">
-	    	<tr><td rowspan="2" class="question_number">##</td><td rowspan="2" class="question_text">Click on a cell below to get started.</td><td class="answer correct">✓</td></tr>
-	    	<tr><td class="answer incorrect">✗</td></tr>
-	    </table>
-	</div>
-	<div>
-	    <table class="bingo_table">
-	        <tr><td class="bingo_cell">1</td><td class="bingo_cell">2</td><td class="bingo_cell">3</td><td class="bingo_cell">4</td><td class="bingo_cell">5</td></tr>
-	        <tr><td class="bingo_cell">6</td><td class="bingo_cell">7</td><td class="bingo_cell">8</td><td class="bingo_cell">9</td><td class="bingo_cell">10</td></tr>
-	        <tr><td class="bingo_cell">11</td><td class="bingo_cell">12</td><td class="bingo_cell">13</td><td class="bingo_cell">14</td><td class="bingo_cell">15</td></tr>
-	        <tr><td class="bingo_cell">16</td><td class="bingo_cell">17</td><td class="bingo_cell">18</td><td class="bingo_cell">19</td><td class="bingo_cell">20</td></tr>
-	        <tr><td class="bingo_cell">21</td><td class="bingo_cell">22</td><td class="bingo_cell">23</td><td class="bingo_cell">24</td><td class="bingo_cell">25</td></tr>
-	    </table>
-	</div>
+    <div>
+        <table class="question_table">
+            <tr><td rowspan="2" class="question_number">##</td><td rowspan="2" class="question_text">Click on a cell below to get started.</td><td class="answer correct">✓</td></tr>
+            <tr><td class="answer incorrect">✗</td></tr>
+        </table>
+    </div>
+    <div>
+        <table class="bingo_table">
+            <tr><td class="bingo_cell">1</td><td class="bingo_cell">2</td><td class="bingo_cell">3</td><td class="bingo_cell">4</td><td class="bingo_cell">5</td></tr>
+            <tr><td class="bingo_cell">6</td><td class="bingo_cell">7</td><td class="bingo_cell">8</td><td class="bingo_cell">9</td><td class="bingo_cell">10</td></tr>
+            <tr><td class="bingo_cell">11</td><td class="bingo_cell">12</td><td class="bingo_cell">13</td><td class="bingo_cell">14</td><td class="bingo_cell">15</td></tr>
+            <tr><td class="bingo_cell">16</td><td class="bingo_cell">17</td><td class="bingo_cell">18</td><td class="bingo_cell">19</td><td class="bingo_cell">20</td></tr>
+            <tr><td class="bingo_cell">21</td><td class="bingo_cell">22</td><td class="bingo_cell">23</td><td class="bingo_cell">24</td><td class="bingo_cell">25</td></tr>
+        </table>
+    </div>
+    <div class="button_container">
+        <button onclick="Cookies.set('values', JSON.stringify({})); $('.bingo_cell').removeClass('correct'); $('.bingo_cell').removeClass('incorrect');">Reset Board</button>
+    </div>
 </body>
 </html>
