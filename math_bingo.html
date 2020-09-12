@@ -58,7 +58,7 @@
 </head>
 <body>
     <script>
-        $.getJSON("https://donaldkwong.github.io/math_bingo_questions.json", function(data) {
+        $.getJSON("math_bingo_questions.json", function(data) {
             var initial_values = Cookies.get('values');
             if (initial_values) {
                 initial_values = JSON.parse(initial_values);
