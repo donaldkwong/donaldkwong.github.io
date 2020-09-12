@@ -31,7 +31,7 @@
 </head>
 <body>
     <script>
-	    $.getJSON("https://donaldkwong.github.io/math_bingo_questions.json", function(data) {
+	    $.getJSON("math_bingo_questions.json", function(data) {
 	    	for (var number in data) {
 	    		$(".question_table").append("<tr><td rowspan='2' class='question_number'>#"+number+"</td><td class='question_text'>"+data[number].q+"</td></tr><tr><td class='answer_text'>"+data[number].a+"</td></tr>");
 	    	}
