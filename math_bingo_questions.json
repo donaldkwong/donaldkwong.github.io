@@ -20,8 +20,8 @@
         "a": "1/4."
     },
     "6": {
-        "q": "Sam was born in 2009. If Sam is 51 and Tom is 4, what year was Tom born in?",
-        "a": "2015."
+        "q": "What year was the Steindorf math league formed?",
+        "a": "2016."
     },
     "7": {
         "q": "Simplify: 6 + 8 + 3 + 5 + 7 + 3 + 5 + 8 + 1 + 10 * 0.",
@@ -33,7 +33,7 @@
     },
     "9": {
         "q": "Name all of the math competitions we go to.",
-        "a": "Mathcounts, AMC, Math Kangaroo, Math Olympiad, Math Field Day."
+        "a": "Mathcounts, AMC, Math Kangaroo, Math Olympiad."
     },
     "10": {
         "q": "Find the area of a circle with diameter 32.",
@@ -68,8 +68,8 @@
         "a": "5 and 5*sqrt(3)."
     },
     "18": {
-        "q": "Name two Pythagorean triples that contain 5.",
-        "a": "(3, 4, 5) and (5, 12, 13)."
+        "q": "How many boys (students only) are there in today’s math league?",
+        "a": "TBD."
     },
     "19": {
         "q": "Which is larger, 8/17 or 12/27?",
@@ -84,19 +84,19 @@
         "a": "1/8, 12.5% and 25%, 1/4."
     },
     "22": {
-        "q": "What is the median of this set of numbers? (5, 50, 10, 12, 33, 100, 2, 33, 50, 5, 44).",
-        "a": "33."
-    },
-    "23": {
-        "q": "What year was the Steindorf math league formed?",
-        "a": "2016."
-    },
-    "24": {
-        "q": "How many boys (students only) are there in today’s math league?",
-        "a": "TBD."
-    },
-    "25": {
         "q": "How many students’ first names in today’s math league begin with A?",
         "a": "TBD."
+    },
+    "23": {
+        "q": "Sam was born in 2009. If Sam is 51 and Tom is 4, what year was Tom born in?",
+        "a": "2015."
+    },
+    "24": {
+        "q": "Name two Pythagorean triples that contain 5.",
+        "a": "(3, 4, 5) and (5, 12, 13)."
+    },
+    "25": {
+        "q": "What is the median of this set of numbers? (5, 50, 10, 12, 33, 100, 2, 33, 50, 5, 44).",
+        "a": "33."
     }
 }
