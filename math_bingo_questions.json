@@ -4,99 +4,99 @@
         "a": "A number with real and imaginary components (ie, 1 + 2i)."
     },
     "2": {
-        "q": "A placeholder for the math bingo question for cell number 2.",
-        "a": "The answer for placeholder question for cell number 2."
+        "q": "Simplify 27^(2/3).",
+        "a": "9."
     },
     "3": {
-        "q": "A placeholder for the math bingo question for cell number 3.",
-        "a": "The answer for placeholder question for cell number 3."
+        "q": "Find one solution for x: x^3 - x^2 - (-x^2) = (-x^4) + x^5 - x^9.",
+        "a": "0."
     },
     "4": {
-        "q": "A placeholder for the math bingo question for cell number 4.",
-        "a": "The answer for placeholder question for cell number 4."
+        "q": "How many digits are zero in 10^8 + 24 - 14?",
+        "a": "7."
     },
     "5": {
-        "q": "A placeholder for the math bingo question for cell number 5.",
-        "a": "The answer for placeholder question for cell number 5."
+        "q": "What is the probability of getting two tails when flipping two coins?",
+        "a": "1/4."
     },
     "6": {
-        "q": "A placeholder for the math bingo question for cell number 6.",
-        "a": "The answer for placeholder question for cell number 6."
+        "q": "Sam was born in 2009. If Sam is 51 and Tom is 4, what year was Tom born in?",
+        "a": "2015."
     },
     "7": {
-        "q": "A placeholder for the math bingo question for cell number 7.",
-        "a": "The answer for placeholder question for cell number 7."
+        "q": "Simplify: 6 + 8 + 3 + 5 + 7 + 3 + 5 + 8 + 1 + 10 * 0.",
+        "a": "46."
     },
     "8": {
-        "q": "A placeholder for the math bingo question for cell number 8.",
-        "a": "The answer for placeholder question for cell number 8."
+        "q": "What was the year 1301 years ago?",
+        "a": "721."
     },
     "9": {
-        "q": "A placeholder for the math bingo question for cell number 9.",
-        "a": "The answer for placeholder question for cell number 9."
+        "q": "Name all of the math competitions we go to.",
+        "a": "Mathcounts, AMC, Math Kangaroo, Math Olympiad, Math Field Day."
     },
     "10": {
-        "q": "A placeholder for the math bingo question for cell number 10.",
-        "a": "The answer for placeholder question for cell number 10."
+        "q": "Find the area of a circle with diameter 32.",
+        "a": "256 * pi."
     },
     "11": {
-        "q": "A placeholder for the math bingo question for cell number 11.",
-        "a": "The answer for placeholder question for cell number 11."
+        "q": "How many prime numbers are there from 1 to 20?",
+        "a": "8."
     },
     "12": {
-        "q": "A placeholder for the math bingo question for cell number 12.",
-        "a": "The answer for placeholder question for cell number 12."
+        "q": "What is the degree of an angle in an equilateral triangle?",
+        "a": "60."
     },
     "13": {
-        "q": "A placeholder for the math bingo question for cell number 13.",
-        "a": "The answer for placeholder question for cell number 13."
+        "q": "What is 3 - 3 * 3 + 3 / 3?",
+        "a": "-5."
     },
     "14": {
-        "q": "A placeholder for the math bingo question for cell number 14.",
-        "a": "The answer for placeholder question for cell number 14."
+        "q": "What is 11111 * 11111?",
+        "a": "123454321."
     },
     "15": {
-        "q": "A placeholder for the math bingo question for cell number 15.",
-        "a": "The answer for placeholder question for cell number 15."
+        "q": "What is the 10th digit in pi?",
+        "a": "3."
     },
     "16": {
-        "q": "A placeholder for the math bingo question for cell number 16.",
-        "a": "The answer for placeholder question for cell number 16."
+        "q": "What is the 7th Fibonacci number (starting with 1)?",
+        "a": "13."
     },
     "17": {
-        "q": "A placeholder for the math bingo question for cell number 17.",
-        "a": "The answer for placeholder question for cell number 17."
+        "q": "In a 30-60-90 triangle with hypotenuse of length 10, what are the lengths of the other two sides?",
+        "a": "5 and 5*sqrt(3)."
     },
     "18": {
-        "q": "A placeholder for the math bingo question for cell number 18.",
-        "a": "The answer for placeholder question for cell number 18."
+        "q": "Name two Pythagorean triples that contain 5.",
+        "a": "(3, 4, 5) and (5, 12, 13)."
     },
     "19": {
-        "q": "A placeholder for the math bingo question for cell number 19.",
-        "a": "The answer for placeholder question for cell number 19."
+        "q": "Which is larger, 8/17 or 12/27?",
+        "a": "8/17."
     },
     "20": {
-        "q": "A placeholder for the math bingo question for cell number 20.",
-        "a": "The answer for placeholder question for cell number 20."
+        "q": "How many dots are there on a 20-sided die?",
+        "a": "210."
     },
     "21": {
-        "q": "A placeholder for the math bingo question for cell number 21.",
-        "a": "The answer for placeholder question for cell number 21."
+        "q": "Which two pairs are equivalent? 1/8, 25%, 12.5%, 1/12, 33%, 1/4, 1/6.",
+        "a": "1/8, 12.5% and 25%, 1/4."
     },
     "22": {
-        "q": "A placeholder for the math bingo question for cell number 22.",
-        "a": "The answer for placeholder question for cell number 22."
+        "q": "What is the median of this set of numbers? (5, 50, 10, 12, 33, 100, 2, 33, 50, 5, 44).",
+        "a": "33."
     },
     "23": {
-        "q": "A placeholder for the math bingo question for cell number 23.",
-        "a": "The answer for placeholder question for cell number 23."
+        "q": "What year was the Steindorf math league formed?",
+        "a": "2016."
     },
     "24": {
-        "q": "A placeholder for the math bingo question for cell number 24.",
-        "a": "The answer for placeholder question for cell number 24."
+        "q": "How many boys (students only) are there in today’s math league?",
+        "a": "TBD."
     },
     "25": {
-        "q": "A placeholder for the math bingo question for cell number 25.",
-        "a": "The answer for placeholder question for cell number 25."
+        "q": "How many students’ names in today’s math league begin with A?",
+        "a": "TBD."
     }
 }
