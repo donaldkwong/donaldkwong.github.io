@@ -182,7 +182,7 @@ h1 span {
 	}
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
 	.flex-parent {
 		justify-content: initial;
 	}
@@ -235,4 +235,4 @@ h1 span {
 	body {
 		min-height: 950px;
 	}
-}
+}*/
